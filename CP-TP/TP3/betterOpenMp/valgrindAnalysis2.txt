@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------
+I1 cache:         32768 B, 64 B, 8-way associative
+D1 cache:         32768 B, 64 B, 8-way associative
+LL cache:         8388608 B, 64 B, 16-way associative
+Command:          ./bin/k_means 10000000 4 8
+Data file:        cachegrind.out.2206
+Events recorded:  Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw
+Events shown:     Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw
+Event sort order: Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw
+Thresholds:       0.1 100 100 100 100 100 100 100 100
+Include dirs:     
+User annotated:   
+Auto-annotation:  off
+
+--------------------------------------------------------------------------------
+Ir            I1mr  ILmr  Dr            D1mr    DLmr    Dw          D1mw      DLmw      
+--------------------------------------------------------------------------------
+7,932,104,429 1,472 1,444 2,040,897,606 759,478 758,349 552,075,470 1,876,217 1,876,100  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir            I1mr ILmr Dr          D1mr    DLmr    Dw          D1mw      DLmw       file:function
+--------------------------------------------------------------------------------
+3,752,430,534   15   15 773,374,561     101     101           0         0         0  /build/glibc-SzIz7B/glibc-2.31/math/../sysdeps/ieee754/dbl-64/e_pow.c:__ieee754_pow_fma
+  980,662,822   14   14 341,295,597 755,261 755,260  82,032,008        14        14  /mnt/d/Uminho/CP/CP-TP1/TP3/betterOpenMp/src/k_means.c:associaPontosInit._omp_fn.0
+  637,419,356    3    3 160,000,000       0       0  60,000,000         0         0  /build/glibc-SzIz7B/glibc-2.31/stdlib/random_r.c:random_r
+  612,254,891    3    3 161,119,705       2       2  96,671,826         0         0  /build/glibc-SzIz7B/glibc-2.31/math/./w_pow_template.c:pow@@GLIBC_2.29
+  547,807,030    1    1 193,343,654       0       0 193,343,658         5         5  /mnt/d/Uminho/CP/CP-TP1/TP3/betterOpenMp/src/k_means.c:calculaDist
+  420,000,000    2    2 160,000,000       0       0  40,000,000         0         0  /build/glibc-SzIz7B/glibc-2.31/stdlib/random.c:random
+  350,000,124    8    8  95,000,036       2       2  60,000,016 1,875,002 1,875,002  /mnt/d/Uminho/CP/CP-TP1/TP3/betterOpenMp/src/k_means.c:inicializa
+  201,171,901  189  187 100,567,845      82      43         804        74        52  ???:???
+  161,119,702    0    0           0       0       0           0         0         0  /build/glibc-SzIz7B/glibc-2.31/math/../sysdeps/ieee754/dbl-64/math_config.h:__ieee754_pow_fma
+  100,000,000    1    1  20,000,000       0       0  20,000,000         0         0  /build/glibc-SzIz7B/glibc-2.31/stdlib/rand.c:rand
+   80,559,850    1    1           0       0       0           0         0         0  /build/glibc-SzIz7B/glibc-2.31/math/w_sqrt_compat.c:sqrt
+   48,335,910    1    1  16,111,970       1       1           0         0         0  /build/glibc-SzIz7B/glibc-2.31/math/../sysdeps/x86_64/fpu/e_sqrt.c:__sqrt_finite@GLIBC_2.15
+   40,000,000    0    0  20,000,000       0       0           0         0         0  /build/glibc-SzIz7B/glibc-2.31/stdlib/../sysdeps/unix/sysv/linux/x86/lowlevellock.h:random
+
